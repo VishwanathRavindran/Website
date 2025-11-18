@@ -6,8 +6,6 @@
   <title>Vishwanath Ravindran — Personal Website</title>
   <meta name="description" content="Research homepage of Firstname Lastname — publications, preprints, projects." />
   <link rel="icon" href="data:," />
-  <!-- Minimal, formal, works-first academic template. No frameworks. -->
-  <!-- LaTeX-like Computer Modern web fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
   <style>
     :root{
@@ -49,37 +47,32 @@
   justify-content:space-between;
   align-items:center;
   gap:8px;
-  flex-wrap:wrap; /* wraps nicely on small screens */
+  flex-wrap:wrap; 
 }
     .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-    /* Print-friendly */
     @media print{ nav, #theme, #filters, .controls, .tag, details{ display:none !important; } body{ background:#fff; color:#000; } .card{ background:#fff; } }
 
-    /* Thumbnails & gallery */
     .thumb{ width:100%; aspect-ratio:16/9; border-radius:10px; background:linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.08)), var(--card); background-size:cover; background-position:center; background-image: var(--img), linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.08)); }
     .gallery{ gap:14px; }
     .gallery figure{ margin:0; }
     .gallery img{ width:100%; height:200px; object-fit:cover; border-radius:12px; border:1px solid var(--line); background:var(--card); }
-    /* Projects: uniform card sizing & bottom‑aligned footer */
     .grid-3{ grid-template-columns: repeat(3,1fr); align-items: stretch; }
     .project-card{ min-height: 380px; display:flex; flex-direction:column; }
 
-    /* Publications: right-side thumbnails */
-/* Publications: main row = text + optional thumbnail */
+
 .pub-main{
   display:grid;
-  grid-template-columns: 1fr auto; /* text on left, thumb (auto width) on right */
+  grid-template-columns: 1fr auto; 
   gap:14px;
   align-items:start;
 }
 @media (max-width: 600px){
-  .pub-main{ grid-template-columns: 1fr; } /* stack on small screens */
+  .pub-main{ grid-template-columns: 1fr; } 
 }
 
-/* Publication thumbnail defaults (can be overridden per item in JS) */
 .pub-thumb{
-  width:140px;             /* default width if you don't specify one in data */
-  aspect-ratio:4/3;        /* default ratio */
+  width:140px;             
+  aspect-ratio:4/3;        
   border-radius:10px;
   background-size:cover;
   background-position:center;
@@ -92,7 +85,7 @@
 }
 .thumb {
   width: 100%;
-  aspect-ratio: 16/9;   /* default */
+  aspect-ratio: 16/9;   
   border-radius: 10px;
   background-size: cover;
   background-position: center;
@@ -100,13 +93,13 @@
   background-image: var(--img);
 }
 .proj-footer {
-  margin-top: auto; /* push footer to bottom of card */
+  margin-top: auto; 
 }
 
 .proj-footer .links {
   display: flex;
-  gap: 10px;          /* buttons side-by-side */
-  flex-wrap: wrap;    /* allow wrapping if many buttons */
+  gap: 10px;          
+  flex-wrap: wrap;    
 }
 
 .proj-tags {
@@ -114,7 +107,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  justify-content: flex-start; /* left align tags */
+  justify-content: flex-start;
 }
 
 .project-card p {
@@ -122,7 +115,7 @@
   hyphens: auto;
 }
   </style>
-  <!-- Early theme set to avoid flash -->
+
   <script>
     try{
       const saved = localStorage.getItem('theme');
@@ -144,14 +137,12 @@
 <nav aria-label="Primary">
   <a href="#publications">Publications</a>
   <a href="#projects">Projects</a>
-  <!-- <a href="#places">Places</a> -->
   <a href="#contact">Contact</a>
 </nav>
       </div>
     </header>
 
     <main id="main" tabindex="-1">
-      <!-- Minimal bio strip (works-first) -->
       <section id="bio">
         <div class="grid grid-2">
           <div>
@@ -159,7 +150,7 @@
  Hello! Here, I provide an overview of my research activities. My research interests are in the field of 
   <em><span style="color: rgb(17, 0, 255);">mechanics of active materials, construction automation, product</span></em> and <em><span style="color: rgb(17, 0, 255);">
     instrument design</span></em>.<br> I am pursuing my Master’s thesis (titled <span style="color: rgb(255, 0, 157);"><em>Biohybrid Compliant Mechanisms</em></span>) under the guidance of <a href="https://mecheng.iisc.ac.in/suresh/" target="_blank">Prof.&nbsp;G.&nbsp;K.&nbsp;Anathasuresh</a>. I completed my Bachelor’s thesis (on <span style="color: rgb(255, 0, 157);"><em>Flow of 3D printable concrete</em></span>) under the supervision 
-    of <a href="https://www.researchgate.net/profile/A-V-Rahul" target="_blank">Prof.&nbsp;A.&nbsp;V.&nbsp;Rahul</a> and <a href="https://thiyaguIIT Tirupati.wixsite.com/acad" target="_blank">Prof.&nbsp;Thiyagarajan&nbsp;R</a>.
+    of <a href="https://www.researchgate.net/profile/A-V-Rahul" target="_blank">Prof.&nbsp;A.&nbsp;V.&nbsp;Rahul</a> and <a href="https://thiyaguIITT.wixsite.com/acad" target="_blank">Prof.&nbsp;Thiyagarajan&nbsp;R</a>.
 </p>
           </div>
           <div>
@@ -207,9 +198,7 @@
       </section>
 
       <section id="places">
-       <!-- <h2>Places</h2>
-        <p class="muted" style="margin-top:-6px">Three images that quietly anchor your story (e.g., Bengaluru · Tirupati · Cambridge). Replace the <code>src</code> and captions.</p>
-      --><div class="grid grid-3 gallery">
+      <div class="grid grid-3 gallery">
           <figure>
             <img src="thumbs/chennai_railway.jpg" alt="Location 1" />
             <figcaption class="muted">Chennai</figcaption>
@@ -229,8 +218,6 @@
         <h2>Contact</h2>
         <p>
           <a class="btn" href="mailto:6vishwanath@gamil.com">✉️ Email</a>
-         <!-- <a class="btn" href="#" rel="me" aria-label="Google Scholar">🧠 Scholar</a>
-          <a class="btn" href="#" aria-label="ORCID">🪪 ORCID</a>-->
           <a class="btn" href="slides/CV_oct_2025.pdf" target="_blank" rel="noopener">📄 CV (PDF)</a>
         </p>
       </section>
@@ -260,7 +247,6 @@
         <div class="links" style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap;"></div>
         <div class="tags" aria-label="tags"></div>
 
-        <!-- Abstract now lives inside the left column -->
         <details class="abstract-box">
           <summary>Abstract</summary>
           <div class="abstract"></div>
@@ -274,13 +260,11 @@
 
   <script>
     "use strict";
-    // Utilities
     const $ = sel => document.querySelector(sel);
     const $$ = sel => Array.from(document.querySelectorAll(sel));
 
     function toggleTheme(e){ e && e.preventDefault(); const d=document.documentElement; const dark=d.classList.toggle('dark'); try{localStorage.setItem('theme', dark?'dark':'light');}catch(_){/* ignore */} }
 
-    // --- Publications data ---
     const PUBLICATIONS = [
       { year: 2025, type:'Journal', kind:'Publication', title:'Migration of particles suspended in yield stress fluids: Insights from numerical simulation of pipe flow of 3D printable concrete', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'Journal of Non-Newtonian Fluid Mechanics, Volume 332', links:[{label:'DOI', href:'https://doi.org/10.1016/j.jnnfm.2024.105305'}], tags:['Numerical Simulation','Concrete 3D Printing'], abstract:'In this work, we present a numerical model to analyse particle migration and its impact on local rheological properties when a high-yield stress suspension like 3D printable concrete is transported through a narrow circular pipe. The particle migration is studied through the lens of suspension rheology, where the effect of local particle concentration on rheological properties is accounted for using Krieger–Dougherty-type models. 3D printable mixtures with different aggregate-to-binder (a/b) ratios and flows at various discharge rates are evaluated. It is observed that, depending on the discharge rate and a/b ratio, the flow behaviour could deviate from that expected in a Poiseuille flow of Bingham fluid owing to shear-induced particle migration. Interestingly, as a consequence of particle migration, the formation of a local unsheared region close to the pipe wall is observed, apart from the plug zone at the pipe centre in the partially unsheared pipe flow of Bingham fluids. Often, for concrete pipe flow simulation, the particle size is not small enough to warrant local treatment since the finite size of the particle is not fully reflected in the flow domain. In this work, the developed numerical model is also extended to account for the finite particle size to study the transition between the sheared and unsheared regions and assess the effect of considering finite size in our simulation. Finally, the model’s capability to predict global pressure loss in pipe flow is assessed through comparisons with experimental results.', img:'thumbs/Migration_Image_1.png',  thumbWidth: 250,    thumbAspect: '9/9'    },
       { year: 2024, type:'Conference', kind:null, title:'Inline mixing of accelerator for concrete 3D printing application: Numerical simulation using computational fluid dynamics', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'CONSEC 2024', links:[{label:'Slides', href:'slides/CONSEC_2024_Vishwanath_A_V_Rahul.pdf'}], tags:['Numerical Simulation','Concrete'], abstract:'Concrete 3D printing is a recent construction technique where an element is fabricated by extruding concrete through the nozzle of a 3D printer. Admixtures like accelerators may be used to improve the buildability of 3D printable concrete. However, unlike traditional concrete, where an accelerator would be added during the concrete mixing stage, in 3D printing, the accelerator addition is desirable to be done at the nozzle of the 3D printer. This study evaluates the inline-mixing capability of two common types of dynamic mixers, a paddle type and a ribbon type mixer, using computational fluid dynamics (CFD) studies. A multi-species CFD model is developed to simulate the advective mixing of accelerator and concrete. The local rheology of concrete is treated as a function of the local accelerator content to account for the impact of the accelerator on the instantaneous concrete rheology. From the results of the simulated model, the mixing homogeneity is quantified through the non-uniformity index. The results indicate a more homogeneous distribution of accelerator in the concrete can be achieved using a ribbon type mixer rather than a paddle type mixer. Also, the ribbon mixer is observed to offer better mechanical performance in comparison to the paddle type mixer. The effects of other geometric parameters on the intermixing performance are also evaluated. It is observed that the nominal advantage offered by the ribbon type mixer can be overcome through higher mechanical power to the paddle type mixer which is more easily realizable, considering the practical difficulty in the fabrication of ribbon type mixing blades.', img:'thumbs/Mixer_img.png' ,  thumbWidth: 400,    thumbAspect: '19/9'}, 
@@ -305,12 +289,11 @@
         node.querySelector('.pub-title').textContent = pub.title;
         node.querySelector('.authors').textContent = pub.authors.join(', ');
         node.querySelector('.abstract').textContent = pub.abstract || '';
-// inside data.forEach(pub => { ... })
-const absBox = node.querySelector('.abstract-box'); // NOTE: node.querySelector (scoped)
+const absBox = node.querySelector('.abstract-box'); 
 if (pub.abstract && pub.abstract.trim() !== '') {
   node.querySelector('.abstract').textContent = pub.abstract;
 } else if (absBox) {
-  absBox.remove(); // no abstract => remove the <details> entirely
+  absBox.remove(); 
 }
 
 
@@ -322,22 +305,18 @@ if (pub.abstract && pub.abstract.trim() !== '') {
         });
         const tagbox = node.querySelector('.tags');
         (pub.tags||[]).forEach(t=>{ const s=document.createElement('span'); s.className='tag'; s.textContent=t; tagbox.appendChild(s); });
-        // thumbnail (uses pub.img if provided else placeholder)
-// Thumbnail sizing & presence
 const thumb = node.querySelector('.pub-thumb');
 if (pub.img) {
   thumb.style.setProperty('background-image', `url('${pub.img}')`);
-  // Optional per-item sizing controls:
-  if (pub.thumbWidth)  thumb.style.width       = pub.thumbWidth + 'px';  // e.g., 220
-  if (pub.thumbAspect) thumb.style.aspectRatio = pub.thumbAspect;        // e.g., '16/9' or '1/1'
+  if (pub.thumbWidth)  thumb.style.width       = pub.thumbWidth + 'px';  
+  if (pub.thumbAspect) thumb.style.aspectRatio = pub.thumbAspect;       
 } else {
-  thumb.remove(); // no thumbnail at all
+  thumb.remove();// no thumbnail at all
 }
 wrap.appendChild(node);
       });
     }
 
-    // --- Projects data ---
     const PROJECTS = [
       { title:'Lab-scale concrete 3D printer', desc:'A lab-scale concrete 3D printer with a mobile was fabricated for testing a novel printhead at the Building Materials lab at IIT Tiruapti.', img:'thumbs/3d_printer.jpg',thumbAspect: '3/3', links:[{label:'Code', href:'slides/XYZ-code.zip'},{label:'Manual', href:'slides/Manual_for_Concrete_3D_printer.pdf'}], tags:['Product Design','Concrete'] },
       { title:'Control of stress-induced morphogenesis of epithelial cells through kinematic constraints', desc:' Term project for "ME251 (IISc): Biomechanics".  The significance of mechanical constraints on the epithelial morphogenesis is investigated and the possibility of engineering particular forms of epithelial deformations at specific sites by prescribing appropriate mechanical constraints is looked into.', img:'thumbs/ME251.png', thumbAspect: '10.75/9',links:[{label:'Report', href:'slides/ME251__Biomech__Project_report.pdf'}], tags:['Structural Analysis','Active Matter'] },
@@ -385,12 +364,11 @@ const th = document.createElement('div');
 th.className = 'thumb';
 th.style.setProperty('--img', `url('${p.img}')`);
 
-// Custom aspect ratio per project
 if (p.thumbAspect) {
-  th.style.aspectRatio = p.thumbAspect;   // e.g., "4/3" or "1/1"
+  th.style.aspectRatio = p.thumbAspect;   
 }
 if (p.thumbHeight) {
-  th.style.height = p.thumbHeight + 'px'; // fallback if you want fixed height
+  th.style.height = p.thumbHeight + 'px'; 
 }
         const ttl = document.createElement('div'); ttl.className='pub-title'; ttl.textContent = p.title;
         const para = document.createElement('p'); para.textContent = p.desc;
@@ -403,7 +381,7 @@ if (p.thumbHeight) {
         card.append(th, ttl, para, footer);
         wrap.appendChild(card);
       });
-      filterProjects(); // start hidden until filter/search
+      filterProjects(); 
     }
 
     function filterProjects(){
@@ -416,9 +394,7 @@ if (p.thumbHeight) {
     const hay  = el.textContent.toLowerCase();
     const tags = (el.dataset.tags || '').split(',').filter(Boolean);
 
-    // If no pills are active → all tags are OK
     const tagOk = active.length ? active.some(t => tags.includes(t)) : true;
-    // If no query → text match is automatically OK
     const qOk   = q ? hay.includes(q) : true;
 
     const visible = tagOk && qOk;
@@ -429,7 +405,6 @@ if (p.thumbHeight) {
   const hint = document.getElementById('projhint');
   if (hint) {
     const isFiltered = active.length > 0 || q.length > 0;
-    // Show hint only when user has applied some filter/search and nothing matches
     hint.style.display = (isFiltered && shown === 0) ? '' : 'none';
   }
 }
@@ -440,7 +415,6 @@ if (p.thumbHeight) {
       filterProjects();
     }
 
-    // --- Self-tests (debug) ---
     function selfTest(){
       const issues = [];
       if(!$('#publist')) issues.push('#publist missing');
@@ -449,11 +423,9 @@ if (p.thumbHeight) {
       if(!Array.isArray(PUBLICATIONS) || PUBLICATIONS.length<1) issues.push('PUBLICATIONS empty');
       if(!Array.isArray(PROJECTS) || PROJECTS.length<1) issues.push('PROJECTS empty');
 
-      // Test 1: default state (no filters, no query) => hidden projects
       const defaultVisible = $$('#projlist .card').filter(c=> c.style.display !== 'none').length;
       if(defaultVisible !== 0) issues.push('Default should hide all projects, but some are visible');
 
-      // Test 2: union filtering logic for two pills (if present)
       const pills = $$('#pfilters .pill');
       if(pills.length >= 2){
         const t1 = pills[0].textContent, t2 = pills[1].textContent;
@@ -463,23 +435,19 @@ if (p.thumbHeight) {
         const visible = $$('#projlist .card').filter(c=> c.style.display !== 'none');
         const expected = PROJECTS.filter(p=> p.tags.includes(t1) || p.tags.includes(t2)).length;
         if(visible.length !== expected) issues.push(`Union filter mismatch (saw ${visible.length}, expected ${expected})`);
-        // reset
         pills[0].setAttribute('aria-pressed','false');
         pills[1].setAttribute('aria-pressed','false');
         filterProjects();
       }
 
-      // Test 3: search should reveal something for a known token
       const pq = $('#pq'); if(pq){ pq.value = 'frf'; filterProjects(); }
       const foundBySearch = $$('#projlist .card').some(c=> c.style.display !== 'none');
       if(!foundBySearch) issues.push('Search for "frf" should reveal at least one project');
       if(pq){ pq.value=''; filterProjects(); }
 
-      // Test 4: publication thumbnails exist and count matches data
       const thumbs = $$('#publist .pub-thumb');
       if(thumbs.length !== PUBLICATIONS.length) issues.push(`Pub thumbs mismatch: have ${thumbs.length}, expected ${PUBLICATIONS.length}`);
 
-      // Test 5: publications count matches DOM cards
       const pubCards = $$('#publist .pub');
       if(pubCards.length !== PUBLICATIONS.length) issues.push(`Pub cards mismatch: have ${pubCards.length}, expected ${PUBLICATIONS.length}`);
 
@@ -487,11 +455,9 @@ if (p.thumbHeight) {
       else console.log('[SelfTest] OK');
     }
 
-    // Footer dates
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('updated').textContent = new Date().toLocaleDateString(undefined,{year:'numeric', month:'short'});
 
-    // Init after DOM is ready
     (function init(){
       try { renderPubs(); } catch(e){ console.error('RenderPubs failed', e); }
       try { renderProjects(); } catch(e){ console.error('RenderProjects failed', e); }
