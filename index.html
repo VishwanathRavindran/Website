@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vishwanath Ravindran — Personal Website</title>
-  <meta name="description" content="Research homepage of Vishwanath Ravindran." />
+  <meta name="description" content="Research homepage of Firstname Lastname — publications, preprints, projects." />
   <link rel="icon" href="data:," />
   <!-- Minimal, formal, works-first academic template. No frameworks. -->
   <!-- LaTeX-like Computer Modern web fonts -->
@@ -44,6 +44,13 @@
     details{ margin-top:8px; }
     code, pre{ font-family: var(--mono); font-size: 12.5px; }
     footer{ padding-top:24px; color:var(--muted); font-size:13px; }
+    .footer-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap; /* wraps nicely on small screens */
+}
     .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     /* Print-friendly */
     @media print{ nav, #theme, #filters, .controls, .tag, details{ display:none !important; } body{ background:#fff; color:#000; } .card{ background:#fff; } }
@@ -134,12 +141,12 @@
       </div>
       <div style="display:flex; align-items:center; gap:10px;">
         <a id="theme" class="btn" href="#" aria-pressed="false" title="Toggle theme" onclick="toggleTheme(event)">🌓 Theme</a>
-        <nav aria-label="Primary">
-          <a href="#publications">Publications</a>
-          <a href="#projects">Projects</a>
-          <a href="#places">Places</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<nav aria-label="Primary">
+  <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
+  <!-- <a href="#places">Places</a> -->
+  <a href="#contact">Contact</a>
+</nav>
       </div>
     </header>
 
@@ -152,27 +159,27 @@
  Hello! Here, I provide an overview of my research activities. My research interests are in the field of 
   <em><span style="color: rgb(17, 0, 255);">mechanics of active materials, construction automation, product</span></em> and <em><span style="color: rgb(17, 0, 255);">
     instrument design</span></em>.<br> I am pursuing my Master’s thesis (titled <span style="color: rgb(255, 0, 157);"><em>Biohybrid Compliant Mechanisms</em></span>) under the guidance of <a href="https://mecheng.iisc.ac.in/suresh/" target="_blank">Prof.&nbsp;G.&nbsp;K.&nbsp;Anathasuresh</a>. I completed my Bachelor’s thesis (on <span style="color: rgb(255, 0, 157);"><em>Flow of 3D printable concrete</em></span>) under the supervision 
-    of <a href="https://www.researchgate.net/profile/A-V-Rahul" target="_blank">Prof.&nbsp;A.&nbsp;V.&nbsp;Rahul</a> and <a href="https://thiyaguiitt.wixsite.com/acad" target="_blank">Prof.&nbsp;Thiyagarajan&nbsp;R</a>.
+    of <a href="https://www.researchgate.net/profile/A-V-Rahul" target="_blank">Prof.&nbsp;A.&nbsp;V.&nbsp;Rahul</a> and <a href="https://thiyaguIIT Tirupati.wixsite.com/acad" target="_blank">Prof.&nbsp;Thiyagarajan&nbsp;R</a>.
 </p>
           </div>
           <div>
             <h3 class="muted" style="margin:0 0 6px; font-weight:600; letter-spacing:.2px; text-transform:uppercase; font-size:12px;">Education</h3>
             <ul style="margin:0; padding-left:18px">
               <li><strong>M.Tech. Mechanical Engineering,</strong> <br> Indian Institute of Science (IISc), Bengaluru, 2024–2026</li>
-              <li><strong>B.Tech. Civil Engineering,</strong> <br>Indian Institute of Technology Tirupati (IITT), Yerpedu, 2020–2024</li>
+              <li><strong>B.Tech. Civil Engineering,</strong> <br>Indian Institute of Technology Tirupati (IIT Tirupati), Yerpedu, 2020–2024</li>
             </ul>
           </div>
         </div>
       </section>
 
       <section id="highlights">
-        <h2>Highlights</h2>
+        <h2>Current works</h2>
         <div class="grid grid-2">
           <article class="card">
-            <div class="meta">2025 · Preprint</div>
-            <div class="pub-title">Revisiting the Mechanical Advantage of Compliant Mechanisms</div>
-            <p>General relations for mechanical advantage of compliant mechanisms based on <em>kinetoelastics</em>, specalized for small strains</p>
-            <div class="tags"><span class="tag">Compliant Mechanisms</span><span class="tag">Modal Analysis</span></div>
+            <div class="meta">2025 · Project</div>
+            <div class="pub-title">Optimal trajectory planning for substantial mechanical advantage in compliant manipulators</div>
+            <p>Using relations for mechanical advantage of compliant mechanisms based on <em>kinetoelastics</em>, developed in prior works, an optimal control strategy for 'soft-touch' or 'hard-contact' of compliant manipulators is proposed.</p>
+            <div class="tags"><span class="tag">Compliant Mechanisms</span><span class="tag">Numerical Simulation</span></div>
           </article>
           <article class="card">
             <div class="meta">2025 · Project</div>
@@ -228,9 +235,18 @@
         </p>
       </section>
 
-      <footer>
-        <div>© <span id="year"></span> Vishwanath Ravindran · Last updated <time id="updated"></time></div>
-      </footer>
+<footer>
+  <div class="footer-row">
+    <div>
+      © <span id="year"></span> Vishwanath Ravindran ·
+      Last updated <time id="updated"></time>
+    </div>
+    <div>
+      Website made with aid of ChatGPT&nbsp;5.1
+    </div>
+  </div>
+</footer>
+
     </main>
   </div>
 
@@ -243,13 +259,16 @@
         <div class="authors muted"></div>
         <div class="links" style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap;"></div>
         <div class="tags" aria-label="tags"></div>
+
+        <!-- Abstract now lives inside the left column -->
+        <details class="abstract-box">
+          <summary>Abstract</summary>
+          <div class="abstract"></div>
+        </details>
       </div>
+
       <div class="pub-thumb" aria-hidden="true"></div>
     </div>
-<details class="abstract-box">
-  <summary>Abstract</summary>
-  <div class="abstract"></div>
-</details>
   </article>
 </template>
 
@@ -265,9 +284,9 @@
     const PUBLICATIONS = [
       { year: 2025, type:'Journal', kind:'Publication', title:'Migration of particles suspended in yield stress fluids: Insights from numerical simulation of pipe flow of 3D printable concrete', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'Journal of Non-Newtonian Fluid Mechanics, Volume 332', links:[{label:'DOI', href:'https://doi.org/10.1016/j.jnnfm.2024.105305'}], tags:['Numerical Simulation','Concrete 3D Printing'], abstract:'In this work, we present a numerical model to analyse particle migration and its impact on local rheological properties when a high-yield stress suspension like 3D printable concrete is transported through a narrow circular pipe. The particle migration is studied through the lens of suspension rheology, where the effect of local particle concentration on rheological properties is accounted for using Krieger–Dougherty-type models. 3D printable mixtures with different aggregate-to-binder (a/b) ratios and flows at various discharge rates are evaluated. It is observed that, depending on the discharge rate and a/b ratio, the flow behaviour could deviate from that expected in a Poiseuille flow of Bingham fluid owing to shear-induced particle migration. Interestingly, as a consequence of particle migration, the formation of a local unsheared region close to the pipe wall is observed, apart from the plug zone at the pipe centre in the partially unsheared pipe flow of Bingham fluids. Often, for concrete pipe flow simulation, the particle size is not small enough to warrant local treatment since the finite size of the particle is not fully reflected in the flow domain. In this work, the developed numerical model is also extended to account for the finite particle size to study the transition between the sheared and unsheared regions and assess the effect of considering finite size in our simulation. Finally, the model’s capability to predict global pressure loss in pipe flow is assessed through comparisons with experimental results.', img:'thumbs/Migration_Image_1.png',  thumbWidth: 250,    thumbAspect: '9/9'    },
       { year: 2024, type:'Conference', kind:null, title:'Inline mixing of accelerator for concrete 3D printing application: Numerical simulation using computational fluid dynamics', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'CONSEC 2024', links:[{label:'Slides', href:'slides/CONSEC_2024_Vishwanath_A_V_Rahul.pdf'}], tags:['Numerical Simulation','Concrete'], abstract:'Concrete 3D printing is a recent construction technique where an element is fabricated by extruding concrete through the nozzle of a 3D printer. Admixtures like accelerators may be used to improve the buildability of 3D printable concrete. However, unlike traditional concrete, where an accelerator would be added during the concrete mixing stage, in 3D printing, the accelerator addition is desirable to be done at the nozzle of the 3D printer. This study evaluates the inline-mixing capability of two common types of dynamic mixers, a paddle type and a ribbon type mixer, using computational fluid dynamics (CFD) studies. A multi-species CFD model is developed to simulate the advective mixing of accelerator and concrete. The local rheology of concrete is treated as a function of the local accelerator content to account for the impact of the accelerator on the instantaneous concrete rheology. From the results of the simulated model, the mixing homogeneity is quantified through the non-uniformity index. The results indicate a more homogeneous distribution of accelerator in the concrete can be achieved using a ribbon type mixer rather than a paddle type mixer. Also, the ribbon mixer is observed to offer better mechanical performance in comparison to the paddle type mixer. The effects of other geometric parameters on the intermixing performance are also evaluated. It is observed that the nominal advantage offered by the ribbon type mixer can be overcome through higher mechanical power to the paddle type mixer which is more easily realizable, considering the practical difficulty in the fabrication of ribbon type mixing blades.', img:'thumbs/Mixer_img.png' ,  thumbWidth: 400,    thumbAspect: '19/9'}, 
-      { year: 2025, type:'Patent', kind:'Patent', title:'A multi-fluid dynamic inline mixer cum extrusion system', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'Patent documentation (handled by CSRC team, IIT Tirupati)',  tags:['Concrete','Product Design']},
-      { year: 2025, type:'Conference', kind:'Preprint', title:'Revisiting the Mechanical Advantage of Compliant Mechaisms', authors:['Vishwanath R.','G. K. Ananthasuresh'], venue:'iNaCoMM 2025', links:[{label:'Slides', href:'slides/MA_pdf.pdf'}], tags:['Compliant Mechanisms'], abstract:' In this work, the foundational work on the mechanical advantage of compliant mechanisms by Salamon and Midha (1998) is revisited. Inspired by this work, some general relations are derived using kinetoelastic equations. Furthermore, the interpretation of types of mechanical advantages is clarified to avoid ambiguities and to address some shortcomings. The mechanical advantage for a general deformation of a single-input single-output compliant mechanism is derived using the tangent stiffness/compliance matrix. It is simplified for linearised deformations, and the relationships are expressed in terms of the eigenvalues and eigenvectors of the stiffness matrix. These results and their interpretation are elucidated with the examples of a compliant crimping mechanism and a compliant four-bar linkage.', img:'thumbs/MA_img.png' ,  thumbWidth: 300,    thumbAspect: '13/9'}, 
-      { year: 2025, type:'Conference', kind:'Preprint', title:'Computing the Centre of Elasticity in Planar Frames', authors:['Vishwanath R.','G. K. Ananthasuresh'], venue:'iNaCoMM 2025', links:[{label:'Slides', href:'slides/CoE_pdf.pdf'}], tags:['Compliant Mechanisms'], abstract:' At the centre of elasticity, the rotational and translational degrees of freedom are decoupled, i.e. linear forces applied at this point only cause translational displacement, and torque applied at this point causes only rotational displacement. This work focuses on the computation of the centre of elasticity of planar frames. The procedure to find the centre of elasticity of a cantilever beam is detailed, along with the theory on serial and parallel concatenation of frame elements. The theory is presented here in terms of only the stiffness or compliance matrices instead of the screw theory-based approach usually adopted in the literature. The goal of this work is to provide intuition for the centre of elasticity for design practitioners.', img:'thumbs/CoE_img.png' ,  thumbWidth: 300,    thumbAspect: '16/9'}, 
+      { year: 2025, type:'Patent', kind:'Patent', title:'A multi-fluid dynamic inline mixer cum extrusion system', authors:['Vishwanath R.','A. V. Rahul',' Thiyagarajan R'], venue:'Indian patent application id: 202541096238 (Patent documentation handled by CSRC team, IIT Tirupati)',  tags:['Concrete','Product Design']},
+      { year: 2025, type:'Conference', kind:null, title:'Revisiting the Mechanical Advantage of Compliant Mechaisms', authors:['Vishwanath R.','G. K. Ananthasuresh'], venue:'iNaCoMM 2025', links:[{label:'Slides', href:'slides/MA_pdf.pdf'}], tags:['Compliant Mechanisms'], abstract:' In this work, the foundational work on the mechanical advantage of compliant mechanisms by Salamon and Midha (1998) is revisited. Inspired by this work, some general relations are derived using kinetoelastic equations. Furthermore, the interpretation of types of mechanical advantages is clarified to avoid ambiguities and to address some shortcomings. The mechanical advantage for a general deformation of a single-input single-output compliant mechanism is derived using the tangent stiffness/compliance matrix. It is simplified for linearised deformations, and the relationships are expressed in terms of the eigenvalues and eigenvectors of the stiffness matrix. These results and their interpretation are elucidated with the examples of a compliant crimping mechanism and a compliant four-bar linkage.', img:'thumbs/MA_img.png' ,  thumbWidth: 300,    thumbAspect: '13/9'}, 
+      { year: 2025, type:'Conference', kind:null, title:'Computing the Centre of Elasticity in Planar Frames', authors:['Vishwanath R.','G. K. Ananthasuresh'], venue:'iNaCoMM 2025', links:[{label:'Slides', href:'slides/CoE_pdf.pdf'}], tags:['Compliant Mechanisms'], abstract:' At the centre of elasticity, the rotational and translational degrees of freedom are decoupled, i.e. linear forces applied at this point only cause translational displacement, and torque applied at this point causes only rotational displacement. This work focuses on the computation of the centre of elasticity of planar frames. The procedure to find the centre of elasticity of a cantilever beam is detailed, along with the theory on serial and parallel concatenation of frame elements. The theory is presented here in terms of only the stiffness or compliance matrices instead of the screw theory-based approach usually adopted in the literature. The goal of this work is to provide intuition for the centre of elasticity for design practitioners.', img:'thumbs/CoE_img.png' ,  thumbWidth: 300,    thumbAspect: '16/9'}, 
       { year: 2025, type:'Conference', kind:null, title:'Cell-actuated Compliant Mechanisms', authors:['Vishwanath R.','G. K. Ananthasuresh'], venue:'MARSS 2025', links:[{label:'Slides', href:'slides/MARSS_2025.pdf'}], tags:['Compliant Mechanisms'], abstract:' Our early work on cell-actuated compliant mechanisms, is presented with a review of past works done by other memebers (of the M2D2 lab) in this field.', img:'thumbs/cell_actuated.png' ,  thumbWidth: 500,    thumbAspect: '25/9'}, 
 ];
 
@@ -321,17 +340,17 @@ wrap.appendChild(node);
     // --- Projects data ---
     const PROJECTS = [
       { title:'Lab-scale concrete 3D printer', desc:'A lab-scale concrete 3D printer with a mobile was fabricated for testing a novel printhead at the Building Materials lab at IIT Tiruapti.', img:'thumbs/3d_printer.jpg',thumbAspect: '3/3', links:[{label:'Code', href:'slides/XYZ-code.zip'},{label:'Manual', href:'slides/Manual_for_Concrete_3D_printer.pdf'}], tags:['Product Design','Concrete'] },
-      { title:'Estimation and construction-activity scheduling of Health Center-IIT Tirupati', desc:'Estimation of probable construction cost of the Health Centre at IIT Tirupati satisfying requirements imposed by architectural and structural drawings (costs calculated based on the rates suggested by the Delhi Schedule of Rates 2023). ', img:'thumbs/CE401L.png',thumbAspect: '4/3', links:[{label:'Report', href:'slides/Term_Project__CE401L_.pdf'},{label:'Slides', href:'slides/Term_project_CE401L_presentation_18_11_2023.pdf'}], tags:['Concrete','Construction'] },
-      { title:'Structural design calculation of a residential building', desc:'Term project for "CE514L (IITT): Advanced Design of Concrete Structures"', img:'thumbs/CE514.png', thumbAspect: '3/3',links:[{label:'DCR', href:'slides/Term_Project_DCR__CE514L_.pdf'},{label:'DCR', href:'slides/Term_Project_DBR__CE514L_.pdf'}], tags:['Construction','Structural Analysis'] },
-      { title:'Bifurcation in dynamical systems', desc:'Review work for "MA511L (IITT): Ordinary Differential Equations"', img:'thumbs/MA511L.png',  thumbAspect: '4.5/3',links:[{label:'Slides', href:'slides/MA511L_Presentation_Bifurcation.pdf'}], tags:['Math'] },
-      { title:'Energy Dissipation in Particle-based Impact Damper Systems: Investigation based on Elasto-plastic impact model', desc:'Term project for "ME701L (IITT): Nonlinear Dynamical Systems". The non-linear dynamics of the particle damper system subject to impact load is assessed by employing the elasto-plastic model, which is used to accurately predict energy losses during a collision. Using the model, energy dissipation and other system characteristics of the particle damper system are studied, and the damping performance of the system is evaluated.', img:'thumbs/ME701L.png',  thumbAspect: '20/9',links:[{label:'Slides', href:'slides/ME701L_NLD_Final_Presentation_Particle_Impact_Damper_.pdf'},{label:'Report', href:'slides/ME701L_term_paper.pdf'}], tags:['Math','Numerical Simulation'] },
-      { title:'Solving Differential Equations using Quantum Computation', desc:'Review project for "Ph515 (IITT): Basics of quantum computation". A procedure for a finite difference-based method to solve differential equations is presented, and quantum circuit implementation is shown. The procedure is applied to solve the 1-D transient heat equation.', img:'thumbs/PH515.png',  thumbAspect: '18/9',links:[{label:'Slides', href:'slides/PH515_Presentation_Differential_equtaions.pdf'},{label:'Report', href:'slides/PH515_term_paper.pdf'}], tags:['Math','Numerical Simulation'] },
-      { title:'Mass optimized Design of slender telescopic shaft based portable agitator for homogenizing concentrated slurries', desc:'The design was made for the 2023 edition Inter IIT technical meet. The design was performed adhering to proper standards as well as functional requirements expected in the operation, few key functional features include the rubber bellow for shielding the hollow shafts from detrimental substances in the slurry, water and spark-proofing the assembly and a special ancillary part for transport. The project was executed by a team of four (teammates: Arun Kumar, Sneha M. S., K. Chaitali Uday) in the span of a week. My role involved design calculations, assembly design and structural and fluid simulation. ', img:'thumbs/Solanis.png', links:[{label:'Report', href:'slides/Solanis_Product_Design_Challenge.pdf'}], tags:['Product Design','Numerical Simulation'] },
-      { title:'Truss optimization for flexibility', desc:'  Programming assignment of "ME260 (IISc): Structural Optimization..". The objective of this work is to numerically understand the nature of truss structures optimized for flexibility. Depending on the constraints, some of these optimized structures are known to resemble mechanisms. It is of interest in this work to understand the mathematical aspects of it along with the numerical implementation of a programme to optimize the structure.', img:'thumbs/ME260_1.png', thumbAspect: '16/9',links:[{label:'Report', href:'slides/Structural_Optimization_Programming_Assignment_1.pdf'}], tags:['Compliant Mechanisms','Structural Analysis'] },
+      { title:'Control of stress-induced morphogenesis of epithelial cells through kinematic constraints', desc:' Term project for "ME251 (IISc): Biomechanics".  The significance of mechanical constraints on the epithelial morphogenesis is investigated and the possibility of engineering particular forms of epithelial deformations at specific sites by prescribing appropriate mechanical constraints is looked into.', img:'thumbs/ME251.png', thumbAspect: '10.75/9',links:[{label:'Report', href:'slides/ME251__Biomech__Project_report.pdf'}], tags:['Structural Analysis','Active Matter'] },
       { title:'Verification of analytical sensitivity relations through finite difference scheme', desc:' Programming assignment of "ME260 (IISc): Structural Optimization..". Analytical relations for a pressure-load optimization problem are derived and verified with numerical solution obtained through the finite-difference scheme, and the range of perturbation for which the finite difference scheme matches the analytical result is noted.', img:'thumbs/ME260_2.png', thumbAspect: '16/9',links:[{label:'Report', href:'slides/Structural_Optimization_Programming_Assignment_2.pdf'}], tags:['Structural Analysis'] },
-      { title:'Detailed analysis of triple-axis cross pivot elastic pair', desc:' Design assignment of "ME254 (IISc): Compliant Mechanisms".  The performance of triple-axis cross pivot as an elastic pair is studied and relevant parameters of interest were calculated.', img:'thumbs/ME254.png', thumbAspect: '10/9',links:[{label:'Report', href:'slides/DA_1__ME254_.pdf'}], tags:['Compliant Mechanisms','Structural Analysis'] },
+      { title:'Truss optimization for flexibility', desc:'  Programming assignment of "ME260 (IISc): Structural Optimization..". The objective of this work is to numerically understand the nature of truss structures optimized for flexibility. Depending on the constraints, some of these optimized structures are known to resemble mechanisms. It is of interest in this work to understand the mathematical aspects of it along with the numerical implementation of a programme to optimize the structure.', img:'thumbs/ME260_1.png', thumbAspect: '16/9',links:[{label:'Report', href:'slides/Structural_Optimization_Programming_Assignment_1.pdf'}], tags:['Compliant Mechanisms','Structural Analysis'] },
+      { title:'Energy Dissipation in Particle-based Impact Damper Systems: Investigation based on Elasto-plastic impact model', desc:'Term project for "ME701L (IIT Tirupati): Nonlinear Dynamical Systems". The non-linear dynamics of the particle damper system subject to impact load is assessed by employing the elasto-plastic model, which is used to accurately predict energy losses during a collision. Using the model, energy dissipation and other system characteristics of the particle damper system are studied, and the damping performance of the system is evaluated.', img:'thumbs/ME701L.png',  thumbAspect: '20/9',links:[{label:'Slides', href:'slides/ME701L_NLD_Final_Presentation_Particle_Impact_Damper_.pdf'},{label:'Report', href:'slides/ME701L_term_paper.pdf'}], tags:['Math','Numerical Simulation'] },
+      { title:'Solving Differential Equations using Quantum Computation', desc:'Review project for "Ph515 (IIT Tirupati): Basics of quantum computation". A procedure for a finite difference-based method to solve differential equations is presented, and quantum circuit implementation is shown. The procedure is applied to solve the 1-D transient heat equation.', img:'thumbs/PH515.png',  thumbAspect: '18/9',links:[{label:'Slides', href:'slides/PH515_Presentation_Differential_equtaions.pdf'},{label:'Report', href:'slides/PH515_term_paper.pdf'}], tags:['Math','Numerical Simulation'] },
+      { title:'Mass optimized Design of slender telescopic shaft based portable agitator for homogenizing concentrated slurries', desc:'The design was made for the 2023 edition Inter IIT technical meet. The design was performed adhering to proper standards as well as functional requirements expected in the operation, few key functional features include the rubber bellow for shielding the hollow shafts from detrimental substances in the slurry, water and spark-proofing the assembly and a special ancillary part for transport. The project was executed by a team of four (teammates: Arun Kumar, Sneha M. S., K. Chaitali Uday) in the span of a week. My role involved design calculations, assembly design and structural and fluid simulation. ', img:'thumbs/Solanis.png', links:[{label:'Report', href:'slides/Solanis_Product_Design_Challenge.pdf'}], tags:['Product Design','Numerical Simulation'] },
       { title:'Stability analysis of mechanical systems', desc:' Notes prepared for "ME204 (IISc): Mechanics of Elastica". ', img:'thumbs/ME204.png', thumbAspect: '12/9',links:[{label:'Notes', href:'slides/ME204_Notes_Stabiity.pdf'}], tags:['Structural Analysis'] },
-      { title:'Control of stress-induced morphogenesis of epithelial cells through kinematic constraints', desc:' Term project for "ME251 (IISc): Biomechanics".  The significance of mechanical constraints on the epithelial morphogenesis is investigated and the possibility of engineering particular forms of epithelial deformations at specific sites by prescribing appropriate mechanical constraints is looked into.', img:'thumbs/ME251.png', thumbAspect: '10.75/9',links:[{label:'Notes', href:'slides/ME251__Biomech__Project_report.pdf'}], tags:['Structural Analysis','Active Matter'] },
+      { title:'Detailed analysis of triple-axis cross pivot elastic pair', desc:' Design assignment of "ME254 (IISc): Compliant Mechanisms".  The performance of triple-axis cross pivot as an elastic pair is studied and relevant parameters of interest were calculated.', img:'thumbs/ME254.png', thumbAspect: '10/9',links:[{label:'Report', href:'slides/DA_1__ME254_.pdf'}], tags:['Compliant Mechanisms','Structural Analysis'] },
+      { title:'Estimation and construction-activity scheduling of Health Center-IIT Tirupati', desc:'Estimation of probable construction cost of the Health Centre at IIT Tirupati satisfying requirements imposed by architectural and structural drawings (costs calculated based on the rates suggested by the Delhi Schedule of Rates 2023). ', img:'thumbs/CE401L.png',thumbAspect: '4/3', links:[{label:'Report', href:'slides/Term_Project__CE401L_.pdf'},{label:'Slides', href:'slides/Term_project_CE401L_presentation_18_11_2023.pdf'}], tags:['Concrete','Construction'] },
+      { title:'Structural design calculation of a residential building', desc:'Term project for "CE514L (IIT Tirupati): Advanced Design of Concrete Structures"', img:'thumbs/CE514.png', thumbAspect: '3/3',links:[{label:'DCR', href:'slides/Term_Project_DCR__CE514L_.pdf'},{label:'DCR', href:'slides/Term_Project_DBR__CE514L_.pdf'}], tags:['Construction','Structural Analysis'] },
+      { title:'Bifurcation in dynamical systems', desc:'Review work for "MA511L (IIT Tirupati): Ordinary Differential Equations"', img:'thumbs/MA511L.png',  thumbAspect: '4.5/3',links:[{label:'Slides', href:'slides/MA511L_Presentation_Bifurcation.pdf'}], tags:['Math'] },
 
 
     ];
@@ -388,23 +407,32 @@ if (p.thumbHeight) {
     }
 
     function filterProjects(){
-      const q = (document.getElementById('pq')?.value || '').trim().toLowerCase();
-      const active = $$('#pfilters .pill[aria-pressed="true"]').map(b=> b.textContent);
-      const cards = $$('#projlist .card');
-      const showAll = active.length>0 || q.length>0;
-      let shown = 0;
-      cards.forEach(el=>{
-        const hay = el.textContent.toLowerCase();
-        const tags = (el.dataset.tags||'').split(',').filter(Boolean);
-        const tagOk = active.length ? active.some(t=> tags.includes(t)) : true; // UNION
-        const qOk = q? hay.includes(q): true;
-        const visible = showAll && tagOk && qOk;
-        el.style.display = visible ? '' : 'none';
-        if(visible) shown++;
-      });
-      const hint = document.getElementById('projhint');
-      if(hint){ hint.style.display = shown? 'none' : ''; }
-    }
+  const q = (document.getElementById('pq')?.value || '').trim().toLowerCase();
+  const active = $$('#pfilters .pill[aria-pressed="true"]').map(b => b.textContent);
+  const cards = $$('#projlist .card');
+
+  let shown = 0;
+  cards.forEach(el => {
+    const hay  = el.textContent.toLowerCase();
+    const tags = (el.dataset.tags || '').split(',').filter(Boolean);
+
+    // If no pills are active → all tags are OK
+    const tagOk = active.length ? active.some(t => tags.includes(t)) : true;
+    // If no query → text match is automatically OK
+    const qOk   = q ? hay.includes(q) : true;
+
+    const visible = tagOk && qOk;
+    el.style.display = visible ? '' : 'none';
+    if (visible) shown++;
+  });
+
+  const hint = document.getElementById('projhint');
+  if (hint) {
+    const isFiltered = active.length > 0 || q.length > 0;
+    // Show hint only when user has applied some filter/search and nothing matches
+    hint.style.display = (isFiltered && shown === 0) ? '' : 'none';
+  }
+}
 
     function resetProjectFilters(){
       const q = document.getElementById('pq'); if(q) q.value='';
